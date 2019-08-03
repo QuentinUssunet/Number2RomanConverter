@@ -65,12 +65,15 @@ public class Launcher {
 		} else if(chiffre == 5) {
 			result += data.get(5);
 		} else if(chiffre < 9 && chiffre != 0) {
-			for (int i = 5; i < chiffre - 1; i++) {
+			result += data.get(5);
+			for (int i = 5; i < chiffre; i++) {
 				result += data.get(1);
 			}
+		} else if(chiffre == 9) {
+			result += data.get(1);
 			result += data.get(10);
 		}
-		
+
 		return result;
 	}
 
